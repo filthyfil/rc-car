@@ -10,26 +10,26 @@ void setMotor(int xspeed, int yspeed) {
     if (xspeed > 0){
       analogWrite(19, xspeed);
     }
-    // if (xspeed<0){
-    //   xspeed = abs(xspeed);
-    //   analogWrite(22,xspeed);
-    // }
-    // if(xspeed==0){
-    //   analogWrite(22,0);
-    //   analogWrite(19,0);
-    // }
+    if (xspeed<0){
+      xspeed = abs(xspeed);
+      analogWrite(22,xspeed);
+    }
+    if(xspeed==0){
+      analogWrite(22,0);
+      analogWrite(19,0);
+    }
 
     if (yspeed > 0){
       analogWrite(23, yspeed);
     }
-    // if(yspeed < 0){
-    //   yspeed = abs(yspeed);
-    //   analogWrite(18,yspeed);
-    // }
-    // if (yspeed ==0){
-    //   analogWrite(18,0);
-    //   analogWrite(23,0);
-    // }
+    if(yspeed < 0){
+      yspeed = abs(yspeed);
+      analogWrite(18,yspeed);
+    }
+    if (yspeed ==0){
+      analogWrite(18,0);
+      analogWrite(23,0);
+    }
 
 }
 
